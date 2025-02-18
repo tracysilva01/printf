@@ -1,4 +1,6 @@
 *
 
 !.gitignore
+!ft_print_char.c
 !ft_printf.c
+!Makefile

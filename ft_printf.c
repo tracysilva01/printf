@@ -6,33 +6,46 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:01:09 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/15 22:08:46 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/18 23:40:04 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <unistd.h>
+
+int ft_print_char(int c)
+{
+    write(1, &c, 1);
+    return (1);
+}
+
+int ft_print_str(char *string)
+{
+    
+}
 
 void    format_specifier(char c, va_list arguments)
 {
     if (c == 'c')
-        putchar(va_arg(arguments, int));
+        ft_print_char(va_arg(arguments, int));
     else if (c == 's')
-        putstring(va_arg(arguments, char *));
+        ft_print_str(va_arg(arguments, char *));
     else if (c == 'p')
-        putpointer(va_arg(arguments, void *));
+        ft_print_ptr(va_arg(arguments, void *));
     else if (c == 'd' || c == 'i')
-        putnumber(va_arg(arguments, int));
+        ft_print_nbr(va_arg(arguments, int));
     else if (c == 'u' || c == 'x' || c == 'X')
-        putnumber(va_arg(arguments, unsigned int));
+        ft_print_nbr(va_arg(arguments, unsigned int));
     else if (c == '%')
-        putchar('%');
+        ft_print_char('%');
 }
 
 int ft_printf(char const *man_arg, ...)
 {
     va_list arguments;
     int i;
+    int chars_printed;
     
     va_start(arguments, man_arg);
     i = 0;
@@ -44,8 +57,14 @@ int ft_printf(char const *man_arg, ...)
             i += 2;
         }
         else
-            putchar(man_arg[i++]);
+            ft_print_char(man_arg[i++]);
     }
     va_end(arguments);
-    return(i);
+    return(chars_printed);
+}
+
+int main(void)
+{
+    ft_printf("holaa %c", 'x');
+    return (0);
 }
