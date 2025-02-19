@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/18 23:33:57 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/19 20:45:21 by trsilva-         ###   ########.fr       */
+/*   Created: 2025/02/19 20:47:17 by trsilva-          #+#    #+#             */
+/*   Updated: 2025/02/19 21:14:24 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int ft_print_char(int c)
+int ft_print_nbr(int c)
 {
-    write(1, &c, 1);
-    return (1);
+    char *str_nbr;
+    int length;
+
+    str_nbr = ft_itoa(c);
+    if (!str_nbr)
+        return (0);
+
+    length = ft_strlen(str_nbr);
+
+    write(1, str_nbr, length);
+    write(1, "\n", 1);
+
+    free(str_nbr);
+    return (length);
 }

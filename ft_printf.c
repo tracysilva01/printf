@@ -6,24 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:01:09 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/18 23:40:04 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/19 20:46:46 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <unistd.h>
-
-int ft_print_char(int c)
-{
-    write(1, &c, 1);
-    return (1);
-}
-
-int ft_print_str(char *string)
-{
-    
-}
+#include "ft_printf.h"
 
 void    format_specifier(char c, va_list arguments)
 {

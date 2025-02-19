@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/18 23:33:57 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/19 20:45:21 by trsilva-         ###   ########.fr       */
+/*   Created: 2025/02/19 20:28:47 by trsilva-          #+#    #+#             */
+/*   Updated: 2025/02/19 20:45:35 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int ft_print_char(int c)
-{
-    write(1, &c, 1);
-    return (1);
-}
+# include "libft.h"
+# include <stdarg.h>
+# include <stddef.h>
+# include <unistd.h>
+
+int		ft_printf(char const *str, ...);
+int		ft_print_char(int c);
+
+#endif
