@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:01:09 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/19 20:46:46 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/26 19:05:36 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ void    format_specifier(char c, va_list arguments)
         ft_print_ptr(va_arg(arguments, void *));
     else if (c == 'd' || c == 'i')
         ft_print_nbr(va_arg(arguments, int));
-    else if (c == 'u' || c == 'x' || c == 'X')
-        ft_print_nbr(va_arg(arguments, unsigned int));
+    else if (c == 'x' || c == 'X')
+        ft_print_hex(va_arg(arguments, int));
+    else if (c == 'u')
+        ft_print_unsig(va_arg(arguments, unsigned int));
     else if (c == '%')
         ft_print_char('%');
 }

@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 20:28:47 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/26 18:53:12 by trsilva-         ###   ########.fr       */
+/*   Created: 2025/02/26 18:54:35 by trsilva-          #+#    #+#             */
+/*   Updated: 2025/02/26 19:20:44 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "printf.h"
 
-# include "libft.h"
-# include <stdarg.h>
-# include <stddef.h>
-# include <unistd.h>
-
-int		ft_printf(char const *str, ...);
-int		ft_print_char(int c);
-int     ft_print_nbr(int c);
-int     ft_print_str(char *string);
-
-#endif
+int ft_print_hex(int c)
+{
+  
+}
