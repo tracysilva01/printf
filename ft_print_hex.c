@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 18:54:35 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/28 00:03:37 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/28 00:11:53 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,14 @@ int length_hex(int c)
     return (i+1);    
 }
 
-char    convert_hex(int c)
+char    convert_hex(int c, char format)
 {
+    if (format == 'x')
+        return("0123456789abcdef"[c]);
     return("0123456789ABCDEF"[c]);
 }
 
-int ft_print_hex(int c)
+int ft_print_hex(int c, char format)
 {
     int i;
     int len;
@@ -44,7 +46,7 @@ int ft_print_hex(int c)
         return (0);
     while (len > 0)
     {
-        result[--len] = convert_hex(c % 16);
+        result[--len] = convert_hex(c % 16, format);
         c /= 16;
     }
     i = 0;
