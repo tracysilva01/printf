@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 20:44:26 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/19 21:00:33 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/23 22:58:21 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int ft_print_str(char *string)
 
     i = 0;
     while (string[i])
-        write(1, &string[i++], 1);
-    write(1, "\n", 1);
+        ft_print_char(1, &string[i++]);
     return (i);
 }

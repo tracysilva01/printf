@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 20:47:17 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/19 21:14:24 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/23 22:53:10 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int ft_print_nbr(int c)
     length = ft_strlen(str_nbr);
 
     write(1, str_nbr, length);
-    write(1, "\n", 1);
 
     free(str_nbr);
     return (length);

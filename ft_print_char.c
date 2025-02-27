@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 23:33:57 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/19 20:45:21 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/23 22:51:32 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int ft_print_char(int c)
 {
-    write(1, &c, 1);
-    return (1);
+    return(write(1, &c, 1));
 }
