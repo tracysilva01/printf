@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_unsig.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/18 23:33:57 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/28 13:48:22 by trsilva-         ###   ########.fr       */
+/*   Created: 2025/02/28 13:51:30 by trsilva-          #+#    #+#             */
+/*   Updated: 2025/02/28 13:52:05 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_char(int c)
+int ft_print_unsig(unsigned int)
 {
-    char ch;
     
-    ch = (char)c;
-    return(write(1, &ch, 1));
 }

@@ -6,11 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 20:44:26 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/27 23:59:45 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/02/28 13:48:06 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int ft_print_str(char *string)
 {
