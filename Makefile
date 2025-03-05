@@ -6,13 +6,14 @@
 #    By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/18 23:44:48 by trsilva-          #+#    #+#              #
-#    Updated: 2025/02/19 20:26:37 by trsilva-         ###   ########.fr        #
+#    Updated: 2025/03/06 00:23:00 by trsilva-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRCS = ft_printf.c ft_print_char.c
+SRCS = ft_printf.c ft_print_char.c ft_print_hex.c ft_print_nbr.c \
+       ft_print_ptr.c ft_print_str.c ft_print_unsig.c
 OBJS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
