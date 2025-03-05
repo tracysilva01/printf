@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 20:28:47 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/03/05 23:45:32 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/06 00:04:43 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int     ft_print_nbr(int c);
 int     ft_print_str(char *string);
 int     ft_print_hex(int c, char format);
 int     ft_print_ptr(void *ptr);
+int     ft_print_unsig(unsigned int n);
 
 #endif

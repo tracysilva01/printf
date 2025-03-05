@@ -6,28 +6,32 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:01:09 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/03/05 23:56:08 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/06 00:15:27 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    format_specifier(char c, va_list arguments)
+void format_specifier(char c, va_list arguments, int *chars_printed)
 {
+    int count;
+
+    count = 0;
     if (c == 'c')
-        ft_print_char(va_arg(arguments, int));
+        count = ft_print_char(va_arg(arguments, int));
     else if (c == 's')
-        ft_print_str(va_arg(arguments, char *));
+        count = ft_print_str(va_arg(arguments, char *));
     else if (c == 'p')
-        ft_print_ptr(va_arg(arguments, void *));
+        count = ft_print_ptr(va_arg(arguments, void *));
     else if (c == 'd' || c == 'i')
-        ft_print_nbr(va_arg(arguments, int));
+        count = ft_print_nbr(va_arg(arguments, int));
     else if (c == 'x' || c == 'X')
-        ft_print_hex(va_arg(arguments, int), c);
+        count = ft_print_hex(va_arg(arguments, int), c);
     else if (c == 'u')
-        ft_print_unsig(va_arg(arguments, unsigned int));
+        count = ft_print_unsig(va_arg(arguments, unsigned int));
     else if (c == '%')
-        ft_print_char('%');
+        count = ft_print_char('%');
+    *chars_printed += count;
 }
 
 int ft_printf(char const *man_arg, ...)
@@ -43,14 +47,17 @@ int ft_printf(char const *man_arg, ...)
     {
         if (man_arg[i] == '%' && man_arg[i+1])
         {
-            format_specifier(man_arg[i+1], arguments);
+            format_specifier(man_arg[i+1], arguments, &chars_printed);
             i += 2;
         }
         else
+        {
             ft_print_char(man_arg[i++]);
+            chars_printed++;
+        }
     }
     va_end(arguments);
-    return(chars_printed);
+    return (chars_printed);
 }
 
 int main(void)
