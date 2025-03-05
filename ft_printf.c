@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:01:09 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/28 00:09:07 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/05 23:56:08 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int ft_printf(char const *man_arg, ...)
     
     va_start(arguments, man_arg);
     i = 0;
+    chars_printed = 0;
     while (man_arg[i])
     {
         if (man_arg[i] == '%' && man_arg[i+1])

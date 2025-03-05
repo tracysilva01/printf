@@ -6,13 +6,11 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 18:54:35 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/02/28 13:48:18 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/05 23:50:08 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
-#include <stdlib.h>
 
 int length_hex(int c)
 {
