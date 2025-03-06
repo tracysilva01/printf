@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 13:25:49 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/03/06 18:00:50 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/06 18:11:42 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_print_ptr(void *ptr)
 {
-	int count;
-	unsigned long address;
-	char result[16];
-	int i;
+	int				count;
+	unsigned long	address;
+	char			result[16];
+	int				i;
 
 	if (ptr == NULL)
 		return (ft_print_str("(nil)"));
