@@ -6,14 +6,14 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 23:33:57 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/03/05 23:49:39 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/06 18:00:39 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_char(int c)
+int	ft_print_char(int c)
 {
-    write(1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }
