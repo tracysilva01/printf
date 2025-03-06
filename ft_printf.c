@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:01:09 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/03/06 18:06:32 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/06 19:01:57 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	format_specifier(char c, va_list arguments, int *chars_printed)
 	else if (c == 'd' || c == 'i')
 		count = ft_print_nbr(va_arg(arguments, int));
 	else if (c == 'x' || c == 'X')
-		count = ft_print_hex(va_arg(arguments, int), c);
+		count = ft_print_hex(va_arg(arguments, unsigned int), c);
 	else if (c == 'u')
 		count = ft_print_unsig(va_arg(arguments, unsigned int));
 	else if (c == '%')
@@ -58,10 +58,4 @@ int	ft_printf(char const *man_arg, ...)
 	}
 	va_end(arguments);
 	return (chars_printed);
-}
-
-int	main(void)
-{
-	ft_printf("holaa %c", 'x');
-	return (0);
 }

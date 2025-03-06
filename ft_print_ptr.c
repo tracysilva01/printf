@@ -6,11 +6,13 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 13:25:49 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/03/06 18:11:42 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/06 18:20:19 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+char	convert_hex(int c, char format);
 
 int	ft_print_ptr(void *ptr)
 {

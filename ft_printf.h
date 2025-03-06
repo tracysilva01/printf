@@ -6,7 +6,7 @@
 /*   By: trsilva- <trsilva-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 20:28:47 by trsilva-          #+#    #+#             */
-/*   Updated: 2025/03/06 18:01:06 by trsilva-         ###   ########.fr       */
+/*   Updated: 2025/03/06 19:02:21 by trsilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_printf(char const *str, ...);
 int	ft_print_char(int c);
 int	ft_print_nbr(int c);
 int	ft_print_str(char *string);
-int	ft_print_hex(int c, char format);
+int	ft_print_hex(unsigned int c, char format);
 int	ft_print_ptr(void *ptr);
 int	ft_print_unsig(unsigned int n);
 
